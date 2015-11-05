@@ -10,7 +10,7 @@ import scipy as sp
 import cmath
 
 l=1 #length=1m, both source-slit , slit-screen
-D=1.e-3 #slit width = 1*10^-3 m
+D=1.e-1 #slit width = 1*10^-3 m
 nslit=1000. #  # of slit points
 B=1/(nslit)
 lamb=500.e-9 #wavelength
@@ -38,6 +38,6 @@ norm=np.sum(abs(A(x))**2)
 print norm
 
 fig = plt.figure(figsize=(5,5))
-plt.plot(x,np.abs(A(x))**2,'x')
+plt.plot(x,np.abs(A(x))**2/norm,'x')
 plt.xlim(-0.5,0.5)
 plt.show()
